@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Pilihan Ganda</title>
+    <style>
+        /* Styling untuk body */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        /* Kontainer utama dengan latar belakang putih */
+        .kontainer {
+            background-color: #fff; /* Latar belakang putih */
+            padding: 30px; /* Padding di sekitar konten */
+            border-radius: 10px; /* Sudut melengkung */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+            width: 100%;
+            max-width: 500px; /* Membatasi lebar kontainer */
+            text-align: center;
+                       justify-content: center;
+            align-items: center;
+
+        }
+
+        /* Styling untuk soal */
+        .pertanyaan {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px; /* Spasi antara soal dan pilihan */
+            color: #2d2d2d;
+            line-height: 1.5;
+        }
+
+        /* Container grid untuk tombol */
+        .button-container {
+            display: grid; /* Menggunakan Grid */
+            grid-template-columns: repeat(2, 1fr); /* Membuat dua kolom dengan ukuran yang sama */
+            gap: 35px; /* Jarak antar tombol */
+            max-width: 400px; /* Membatasi lebar kontainer tombol */
+            width: 100%;
+            margin-top: 20px;
+            align-items: center; /* Menjaga tombol tetap berada di tengah vertikal */
+            margin: auto;
+        }
+
+        /* Styling untuk tombol */
+        .button {
+            background-color: #4CAF50; /* Warna latar belakang hijau */
+            border: none;
+            color: white;
+            padding: 35px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 8px;
+
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
+            min-width: 120px; /* Agar tombol tidak terlalu kecil */
+        }
+
+        /* Efek hover untuk tombol */
+        .button:hover {
+            background-color: #45a049;
+            transform: translateY(-4px); /* Tombol sedikit terangkat saat hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+        }
+
+        /* Efek aktif pada tombol */
+        .button:active {
+            transform: translateY(2px); /* Menekan tombol sedikit */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Kontainer utama dengan latar belakang putih -->
+    <div class="kontainer">
+        <!-- Soal Pilihan Ganda -->
+        <div class="pertanyaan">
+            Tentukan nilai dari \( f(x) = 2x + 3 \) pada \( x = 4 \).
+        </div>
+        
+        <!-- Kontainer Tombol Pilihan Ganda -->
+        <div class="button-container">
+            <button class="button">A. 13</button>
+            <button class="button">B. 11</button>
+            <button class="button">C. 8</button>
+            <button class="button">D. 15</button>
+        </div>
+    </div>
+
+</body>
+</html>

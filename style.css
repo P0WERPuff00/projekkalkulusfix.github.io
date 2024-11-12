@@ -1,0 +1,1041 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+    line-height: 1.6;
+    color: #333; /* Dark gray for readability */
+    font-size: 16px;
+
+}
+
+
+i {
+  color: #fff;
+}
+
+.margin-right
+{
+  display: flex;
+  margin-left: auto;
+}
+.img-1{
+  width: 200px;
+
+}
+a {
+  text-decoration: none;
+}
+
+
+
+.h1 {
+  padding: 3em 4em 2em 3em;
+  font-size: 3em;
+  font-weight: bold;
+
+}
+
+.padding{
+  padding: 8em 3em 0em 8em;
+  margin-right: auto;
+}
+.bg-purple {
+  background-color: #CFB7EC;
+}
+
+.bg-purple-2 {
+  background-color: #58496A;
+  background: linear-gradient(to bottom, #58496A, #222222);
+}
+
+/*.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #58496A;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: none; 
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+.nav-links.active {
+  display: flex;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  background-color: #333;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+
+.nav-links li a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #CFB7EC;
+}*/
+
+
+
+/*.nav {
+  display: flex; 
+  align-items: center;
+  background-color: #58496A;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+
+}*/
+
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.87); /* Warna dengan transparansi */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* Menambahkan efek blur pada latar belakang navbar */
+  -webkit-backdrop-filter: blur(5px); /* Untuk kompatibilitas dengan Safari */
+}
+
+
+.nav .a {
+
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+}
+
+.nav-item {
+  margin-left: 15px;
+}
+
+.nav-link {
+  color: white;
+  padding: 15px 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.exp{
+  font-size: 30px;
+}
+.math{
+  color: #8e57be;
+  font-size: 25px;
+  font-weight: normal;
+  vertical-align: 8px;
+}
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #CFB7EC;
+  border-radius: 5px;
+}
+
+.bungee-tint-regular {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.a{
+  color: #222;
+}
+
+.exp1{
+  font-size: 50px;
+}
+
+.math1{
+    font-size: 25px;
+    color: #8e57be; 
+    font-size: 30px; 
+    vertical-align: 15px;
+    font-weight: normal;
+}
+/*
+.nav {
+  background-color: #58496A;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  
+
+  padding: 1rem 2rem;
+}
+
+.nav-link {
+  color: white; 
+  padding: 15px 20px; 
+  transition: background-color 0.3s, color 0.3s;  
+}
+
+.a{
+  color: white; 
+  padding: 15px 20px; 
+  transition: background-color 0.3s, color 0.3s; 
+  text-decoration: none; 
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: #CFB7EC; 
+  border-radius: 5px; 
+}
+*/
+.zigzag-background {
+  background-position: center;
+    height: 35em;
+
+/*  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.3);
+*/}
+
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #CFB7EC;
+  transition: width 0.3s, left 0.3s;
+}
+
+.nav-link:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+.text-background {
+  height: 8em;
+  width: 28em;
+  border-radius: 10px;
+/*  background-color: #58496A;
+*/  
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  margin: 9.2em 8em;
+}
+
+
+.induk-container {
+  padding: 20px 20px;
+}
+
+.container {
+  height: auto;
+  padding: 20px 20px;
+}
+
+.container-2 {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  position: static;
+  width: 100%;
+}
+
+.container-2 h1 {
+  font-size: 2em;
+  color: #58496A;
+}
+
+.container-2 p {
+  font-size: 16px;
+  /* Ukuran font teks */
+  color: #333;
+  display: flex;
+  /* Warna teks untuk paragraf */
+  align-items: center;     /* Tengah secara vertikal */
+}
+
+.image {
+  margin-left: auto;
+}
+
+.flex {
+  display: flex;
+ 
+
+}
+
+.keterangan{
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+.toggle {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #3B1E54;
+  border-radius: 100px;
+  width: 25px;
+  justify-content: center;
+  display: flex;
+  height: 25px;
+}
+
+.content {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.block {
+  display: block;
+}
+
+    .plot{
+      width:600px;
+      height:400px;
+    }
+.bulet {}
+
+/* Reset margin dan padding */
+body,
+h1,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/*body {
+  font-family: Arial, sans-serif;
+}
+*/
+
+
+/* Agar toggle dan konten berada dalam satu baris */
+.toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3B1E54;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.toggle .arrow {
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Jika tombol toggle sudah terbuka */
+.toggle.open .arrow {
+  transform: rotate(-135deg);
+}
+
+
+
+/* Styling untuk konten */
+.content {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.content.active {
+  display: block;
+  top: 0;
+  opacity: 1;
+}
+
+/*.content.hidden {
+  opacity: 0;
+}*/
+
+/* Styling untuk paragraph di dalam konten */
+p {
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  margin: 20px;
+}
+
+.rumus{
+  font-size: 17px;
+  background-color: #3A2E3F;
+  color: #222;
+  margin-top: 10px;
+  width: auto;
+  color: #fff;
+}
+
+
+/* General Footer Styles */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Footer content */
+.footer-content {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo a {
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* Footer links */
+.footer-links ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.footer-links ul li {
+  margin: 0 15px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #CFB7EC;
+}
+
+/* Footer Social Icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-socials .social-icon {
+  font-size: 1.5em;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-socials .social-icon:hover {
+  color: #CFB7EC;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  margin: 0;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+
+  .footer-socials {
+    margin-top: 20px;
+  }
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-top: 10em;
+}
+
+.team-member {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 22%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.team-member p {
+  font-size: 1em;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-links a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #CFB7EC;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 100%;
+  }
+}
+
+.align-center {
+  align-items: center;
+}
+
+
+
+
+#graph {
+  width: 80%;
+  max-width: 900px;
+  height: 700px;
+  /* Meningkatkan tinggi grafik */
+  border: 1px solid #ccc;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#workings {
+  margin-top: 30px;
+  max-width: 900px;
+  width: 80%;
+  padding: 10px;
+  background-color: #e8f4f9;
+  border-radius: 5px;
+  overflow-y: auto;
+  max-height: 300px;
+  /* Batas maksimal tinggi */
+}
+
+.step {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.judul {
+  font-size: 30px !important;
+  color: #58496A !important;
+  font-weight: bold;
+}
+
+.con-50 {
+  width: 50%;
+}
+
+
+.btn-quiz {
+  background-color: #b9a9cd;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.btn-quiz:hover {
+  background-color: #e7d5ff;
+  transform: scale(1.1);
+}
+
+.center {
+  justify-content: center;
+  align-content: center;
+}
+
+.soal {
+  font-size: 1.5em !important;
+}
+
+.grid {
+  display: grid;
+  font-family: 'Georgia', serif;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2 kolom dengan lebar sama */
+  grid-template-rows: auto auto;
+  /* 2 baris dengan tinggi otomatis */
+  gap: 20px;
+  /* Jarak antar tombol */
+  max-width: 300px;
+  /* Membatasi lebar kontainer */
+  width: 100%;
+  justify-content: center;
+}
+
+.atas {
+  height: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+#teori{
+  margin-bottom: 70px;
+}
+
+#kalkulator{
+  margin-top: -13vh;
+}
+
+#quiz{
+  margin-top: auto;
+}
+
+
+/* Media Query untuk layar kecil (320px) */
+@media screen and (max-width: 430px) {
+    .zigzag-background {
+        padding: 10px; /* Mengurangi padding agar lebih rapi di layar kecil */
+    }
+
+    .image {
+        width: 85%; /* Membuat gambar responsif agar ukuran gambar menyesuaikan layar */
+        height: auto;
+        margin: auto!important;
+        display: flex;
+        margin-bottom: 20px!important;
+
+    }
+
+    .container-2 {
+        padding: 10px; /* Mengurangi padding pada container agar lebih sesuai dengan layar kecil */
+        flex-wrap: wrap;
+    }
+
+    .padding{
+      padding: 0;
+=    }
+
+    /* Mengurangi ukuran teks dan elemen lainnya untuk layar 320px */
+    .judul {
+        font-size: 20px!important;
+    }
+
+    .rumus{
+      font-size: 13px!important;
+    }
+    .con-bentuk{
+      width: auto!important;
+      font-size: 14px!important;
+    }
+
+    a .nav-link{
+      font-size: 12px!important;
+    }
+
+    p{
+      font-size: 12px!important;
+    }
+    .img-1{
+      width: 100px;
+      margin: auto;
+    }
+    h2{
+      font-size: 20px!important;
+    }
+
+    .nav-link {
+        font-size: 14px; /* Menyesuaikan ukuran font pada navbar */
+    }
+
+    .exp{
+        font-size: 20px!important;
+    }
+
+    .math{
+      font-size: 15px!important;
+    }
+
+    .a{
+      font-size: 12px;
+    }
+    .btn-quiz {
+        font-size: 14px; /* Menyesuaikan ukuran tombol quiz */
+    }
+
+    .exp1{
+  font-size: 25px;
+}
+
+.math1{
+    font-size: 15px;
+}
+    .plot{
+      width:100%;
+      height:400px;
+    }
+
+    .con-p p{
+      margin: 0!important;
+    }
+
+    .footer p {
+        font-size: 12px; /* Menyesuaikan ukuran font footer */
+    }
+
+    .con-p{
+      width: 100% !important;
+    }
+
+    .keterangan{
+      font-size: 14px!important;
+    }
+    .con-soal{
+      margin: 10px auto!important;
+      width: 95% !important;
+
+    }
+
+    .con-kalkulator{
+      margin: 10px auto!important;
+    }
+    .nav-links{
+      justify-content: center;
+      margin: auto;
+    }
+    .btn-quiz{
+      width: 90%!important;
+    }
+    .team-container{
+      margin-top: 10px!important;
+    }
+
+      body {
+    font-size: 14px; /* Menyesuaikan ukuran font untuk layar kecil */
+  }
+
+  .container {
+    padding: 50px 10px; /* Memberikan ruang di sekitar konten */
+    max-width:  100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container-induk{
+     max-width:  100%;
+
+  }
+
+  .container-2{
+    max-width:  100%;
+
+  }
+
+  .nav {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .flex{
+    flex-wrap: wrap; 
+  }
+
+  .nav a {
+    display: block;
+]    text-decoration: none;
+    font-size: 12px;
+  }
+
+    #teori {
+      margin-bottom: 90px;
+    }
+
+    #kalkulator{
+      margin-top: -120px;
+    }
+
+    #quiz{
+      margin-bottom: 200px;
+    }
+
+  img{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 25px!important;
+  }
+}
+
+
+.margin-40px {
+  margin: 150px;
+}
+
+.margin-20{
+  margin: 20px;
+}
+
+/* GRAFIK */
+
+
+.con-kalkulator {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  /* Warna latar belakang kotak */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 660px;
+  /* Maksimal lebar kotak */
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  margin-right: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #58496A;
+  font-weight: 600;
+
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background: linear-gradient(135deg, #8e44ad, #5e2a8c);
+
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(142, 68, 173, 0.4);
+  /* Shadow lebih besar saat hover */
+  background: linear-gradient(135deg, #5e2a8c, #8e44ad);
+  /* Efek hover dengan gradien terbalik */
+}
+
+#plot {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+}
+
+#steps {
+  margin-top: 20px;
+}
+
+.con-bentuk{
+  color: #fff;
+  background-color: #58496A;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.con-p{
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background-color: #58496A;
+  color: #fff;
+  background-color: #58496A;
+  width: 45%;
+  padding: 35px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 20px 20px 20px;
+}
+
+.con-soal{
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom:  20px;
+  margin-left: 40px;
+  width: 85%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.font{
+  font-family: Lato, serif;
+}
+
+
+
+/* CSS untuk efek fade-in saat scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);  /* Konten akan dimulai di bawah */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Ketika elemen sudah berada dalam jangkauan viewport */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);  /* Elemen akan bergerak ke posisi semula */
+}
+import 'animate.css';
