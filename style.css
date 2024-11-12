@@ -725,7 +725,7 @@ button:hover {
 
 
 /* Media Query untuk layar kecil (320px) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
     .zigzag-background {
         padding: 10px; /* Mengurangi padding agar lebih rapi di layar kecil */
     }
