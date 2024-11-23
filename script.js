@@ -1,27 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Menangani klik pada tombol toggle untuk konten pertama
-  const toggleButton1 = document.getElementById('toggleButton1');
-  const content1 = document.getElementById('content1');
-  
-  toggleButton1.addEventListener('click', function () {
-    content1.classList.toggle('active');
-    if (content1.classList.contains('active')) {
-      // Scroll otomatis ke konten yang baru terbuka
-      content1.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+    // Ambil semua tombol toggle dan konten terkait
+    const toggleButtons = document.querySelectorAll('[id^="toggleButton"]'); // Memilih semua ID yang diawali dengan 'toggleButton'
+    const contents = document.querySelectorAll('[id^="content"]'); // Memilih semua ID yang diawali dengan 'content'
 
-  // Menangani klik pada tombol toggle untuk konten kedua
-  const toggleButton2 = document.getElementById('toggleButton2');
-  const content2 = document.getElementById('content2');
-  
-  toggleButton2.addEventListener('click', function () {
-    content2.classList.toggle('active');
-    if (content2.classList.contains('active')) {
-      // Scroll otomatis ke konten yang baru terbuka
-      content2.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+    // Iterasi melalui tombol toggle
+    toggleButtons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+            const content = contents[index]; // Ambil konten terkait berdasarkan indeks
+            content.classList.toggle('active');
+            if (content.classList.contains('active')) {
+                // Scroll otomatis ke konten yang baru terbuka
+                content.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
 
 
@@ -30,100 +22,77 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-        // Fungsi untuk menghitung ekspresi dan menghasilkan nilai y
-        function evaluateExpression(expr, x) {
-            try {
-                // Sanitasi ekspresi, ganti '^' dengan '**' untuk eksponensial (bila ada)
-                expr = expr.replace(/\^/g, '**');
-                
-                // Ganti semua 'x' dengan nilai numerik yang sesuai
-                return eval(expr.replace(/x/g, `(${x})`)); 
-            } catch (e) {
-                alert("Ekspresi tidak valid.");
-                return NaN;
-            }
+function plotExponential() {
+    // Ambil nilai dari input
+    const base = parseFloat(document.getElementById('base').value);
+    const exponentInput = document.getElementById('exponent').value;
+    const xValues = document.getElementById('x_values').value.split(',').map(Number);
+    const constTambahan = parseFloat(document.getElementById('constant').value || 0);
+
+    // Validasi input
+    if (isNaN(base) || !exponentInput || xValues.some(isNaN)) {
+        alert('Silakan masukkan nilai yang valid.');
+        return;
+    }
+
+    const yValues = [];
+    const steps = []; // Menyimpan langkah-langkah pengerjaan
+
+    xValues.forEach(x => {
+        try {
+            // Evaluasi ekspresi eksponen dengan mengganti "x" menjadi nilai aktual
+            const exponent = eval(exponentInput.replace(/x/g, x));
+            const result = Math.pow(base, exponent) + constTambahan;
+            yValues.push(result);
+            steps.push(
+                `Langkah: Substitusi x = ${x}, Hasil: ${base}^(${exponent}) + ${constTambahan} = ${result}`
+            );
+        } catch (error) {
+            console.error('Error evaluating exponent:', error);
+            yValues.push(null); // Tambahkan null jika ada kesalahan
         }
+    });
 
-        // Fungsi untuk menggambar grafik
-        function plotGraph() {
-            var expr = document.getElementById("expression").value; // Ambil ekspresi dari input
-            if (!expr) {
-                alert("Masukkan ekspresi terlebih dahulu!");
-                return;
-            }
+    // Membuat data untuk grafik
+    const data = [{
+        x: xValues,
+        y: yValues,
+        mode: 'markers+lines',
+        type: 'scatter',
+        name: `y = ${base}^(${exponentInput}) + ${constTambahan}`
+    }];
 
-            // Menyimpan langkah-langkah pengerjaan untuk ditampilkan
-            let stepsHtml = "";
-            let xValues = [];
-            let yValues = [];
-            let pointsX = []; // Untuk titik-titik x yang dihitung
-            let pointsY = []; // Untuk titik-titik y yang dihitung
+    // Layout untuk grafik
+    const layout = {
+        title: `Grafik y = ${base}^(${exponentInput}) + ${constTambahan}`,
+        xaxis: { title: 'Nilai x' },
+        yaxis: { title: 'Nilai y' }
+    };
 
-            // Menghitung titik-titik dan membuat langkah-langkah pengerjaan
-            for (let x = -5; x <= 5; x++) { // Kita hanya menghitung pada nilai x integer dari -5 sampai 5
-                let y = evaluateExpression(expr, x); // Hitung y untuk setiap x
-                if (!isNaN(y)) { // Pastikan hasil valid
-                    xValues.push(x);
-                    yValues.push(y);
+    // Tampilkan grafik dengan Plotly
+    Plotly.newPlot('plot', data, layout);
 
-                    // Menambahkan titik-titik pada grafik untuk setiap perhitungan (x, y)
-                    pointsX.push(x);
-                    pointsY.push(y);
+    // Tampilkan langkah-langkah pengerjaan
+    const stepsDiv = document.getElementById('steps');
+    stepsDiv.innerHTML = '<h3>Langkah-langkah Pengerjaan:</h3><ol>' +
+        steps.map(step => `<li>${step}</li>`).join('') + '</ol>';
+}
 
-                    // Menambahkan langkah pengerjaan untuk setiap titik
-                    stepsHtml += `<div class="step">Langkah: Substitusi x = ${x}, Hasil: ${expr.replace(/x/g, `(${x})`)} = ${y}</div>`;
-                }
-            }
+function resetForm() {
+    // Reset input
+    document.getElementById('base').value = '';
+    document.getElementById('exponent').value = '';
+    document.getElementById('x_values').value = '';
+    document.getElementById('constant').value = '';
 
-            // Menampilkan langkah-langkah pengerjaan
-            document.getElementById("steps").innerHTML = stepsHtml;
+    // Hapus grafik dan langkah-langkah pengerjaan
+    Plotly.purge('plot');
+    document.getElementById('steps').innerHTML = '';
 
-            // Trace untuk grafik garis
-            var traceLine = {
-                x: xValues,
-                y: yValues,
-                mode: 'lines',
-                type: 'scatter',
-                name: 'Fungsi',
-                line: { color: 'blue' }
-            };
+    console.log('Form dan grafik berhasil di-reset'); // Log untuk debugging
+}
 
-            // Trace untuk titik-titik hasil perhitungan
-            var tracePoints = {
-                x: pointsX,
-                y: pointsY,
-                mode: 'markers',
-                type: 'scatter',
-                name: 'Titik Perhitungan',
-                marker: {
-                    color: 'red',
-                    size: 8,
-                    symbol: 'circle'
-                }
-            };
 
-            // Layout untuk grafik dengan sumbu X dan Y yang jelas dan rentang terbatas
-            var layout = {
-                title: 'Grafik Fungsi',
-                xaxis: {
-                    title: 'x',
-                    zeroline: true,  // Menambahkan sumbu X di 0
-                    showgrid: true,  // Menambahkan garis grid pada sumbu X
-                    range: [-5, 5]   // Rentang x dari -5 hingga 5
-                },
-                yaxis: {
-                    title: 'y',
-                    zeroline: true,  // Menambahkan sumbu Y di 0
-                    showgrid: true,  // Menambahkan garis grid pada sumbu Y
-                    range: [-10, 20] // Rentang y dari -10 hingga 20
-                },
-                showlegend: true
-            };
-
-            // Buat grafik di elemen dengan id 'graph'
-            Plotly.newPlot('graph', [traceLine, tracePoints], layout);
-        }
-// JavaScript untuk menambahkan kelas 'visible' saat scroll
 window.addEventListener("scroll", function () {
   var elements = document.querySelectorAll('.fade-in');  // Seleksi semua elemen dengan kelas fade-in
   var windowHeight = window.innerHeight;  // Ambil tinggi viewport
