@@ -6,140 +6,27 @@ body {
   margin: 0;
   height: 100vh;
   background-color: #f4f4f4;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'arial', sans-serif;
   font-weight: 400;
     line-height: 1.6;
-    color: #333; /* Dark gray for readability */
+    color: #333; 
     font-size: 16px;
 
 }
 
 
-i {
-  color: #fff;
-}
-
-.margin-right
-{
-  display: flex;
-  margin-left: auto;
-}
-.img-1{
-  width: 200px;
-
-}
-a {
-  text-decoration: none;
-}
-
-
-
-.h1 {
-  padding: 3em 4em 2em 3em;
-  font-size: 3em;
-  font-weight: bold;
-
-}
-
-.padding{
-  padding: 8em 3em 0em 8em;
-  margin-right: auto;
-}
-.bg-purple {
-  background-color: #CFB7EC;
-}
-
-.bg-purple-2 {
-  background-color: #58496A;
-  background: linear-gradient(to bottom, #58496A, #222222);
-}
-
-/*.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #58496A;
-  padding: 1rem 2rem;
-}
-
-.logo a {
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: none; 
-  margin: 0;
-}
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-
-.menu-toggle {
-  display: block;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-}
-
-
-.nav-links.active {
-  display: flex;
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
-  background-color: #333;
-  flex-direction: column;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.nav-links li {
-  margin: 1rem 0;
-}
-
-
-.nav-links li a {
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #CFB7EC;
-}*/
-
-
-
-/*.nav {
-  display: flex; 
-  align-items: center;
-  background-color: #58496A;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 1rem 2rem;
-
-}*/
+/*NAVBAR*/
 
 .nav {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.87); /* Warna dengan transparansi */
+  background-color: rgba(0, 0, 0, 0.87);
   padding: 1rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px); /* Menambahkan efek blur pada latar belakang navbar */
-  -webkit-backdrop-filter: blur(5px); /* Untuk kompatibilitas dengan Safari */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 
@@ -184,15 +71,85 @@ a {
   border-radius: 5px;
 }
 
+.flex {
+  display: flex;
+}
+
+.font{
+  font-family: Lato, serif;
+}
+
 .bungee-tint-regular {
   font-family: "Bungee Tint", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+
 .a{
   color: #222;
 }
+
+
+/*BACKGROUND ZIG-ZAG*/
+
+.zigzag-background {
+  background-position: center;
+    height: 35em;
+}
+
+.padding{
+  padding: 8em 3em 0em 8em;
+  margin-right: auto;
+}
+
+.image {
+  margin-left: auto;
+}
+
+
+i {
+  color: #fff;
+}
+
+.margin-right
+{
+  display: flex;
+  margin-left: auto;
+}
+.img-1{
+  width: 200px;
+
+}
+a {
+  text-decoration: none;
+}
+
+
+
+.h1 {
+  padding: 3em 4em 2em 3em;
+  font-size: 3em;
+  font-weight: bold;
+
+}
+
+
+.bg-purple {
+  background-color: #CFB7EC;
+}
+
+.bg-purple-2 {
+  background-color: #58496A;
+  background: linear-gradient(to bottom, #58496A, #222222);
+}
+
+
+#plot{
+  margin-top: 60px;
+}
+
+
 
 .exp1{
   font-size: 50px;
@@ -205,39 +162,6 @@ a {
     vertical-align: 15px;
     font-weight: normal;
 }
-/*
-.nav {
-  background-color: #58496A;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  
-
-  padding: 1rem 2rem;
-}
-
-.nav-link {
-  color: white; 
-  padding: 15px 20px; 
-  transition: background-color 0.3s, color 0.3s;  
-}
-
-.a{
-  color: white; 
-  padding: 15px 20px; 
-  transition: background-color 0.3s, color 0.3s; 
-  text-decoration: none; 
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1); 
-  color: #CFB7EC; 
-  border-radius: 5px; 
-}
-*/
-.zigzag-background {
-  background-position: center;
-    height: 35em;
-
-/*  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.3);
-*/}
 
 
 .nav-link {
@@ -264,8 +188,7 @@ a {
   height: 8em;
   width: 28em;
   border-radius: 10px;
-/*  background-color: #58496A;
-*/  
+
   align-items: center;
   justify-content: center;
   color: white;
@@ -274,13 +197,15 @@ a {
 }
 
 
-.induk-container {
+.container-induk {
   padding: 20px 20px;
+  background-color: #fff;
 }
 
 .container {
   height: auto;
   padding: 20px 20px;
+  margin-bottom: 50px;
 }
 
 .container-2 {
@@ -291,6 +216,7 @@ a {
   margin: 20px 0;
   position: static;
   width: 100%;
+  height: auto;
 }
 
 .container-2 h1 {
@@ -299,26 +225,19 @@ a {
 }
 
 .container-2 p {
-  font-size: 16px;
-  /* Ukuran font teks */
+  font-size: 20px;
   color: #333;
   display: flex;
-  /* Warna teks untuk paragraf */
-  align-items: center;     /* Tengah secara vertikal */
+  align-items: center;    
 }
 
-.image {
-  margin-left: auto;
+.margin-t-25{
+  margin-top: 25px!important;
 }
 
-.flex {
-  display: flex;
- 
-
-}
 
 .keterangan{
-  font-size: 20px;
+  font-size: 23px;
   margin: 0 20px;
 }
 
@@ -332,6 +251,7 @@ a {
   justify-content: center;
   display: flex;
   height: 25px;
+  margin-left: auto;
 }
 
 .content {
@@ -344,13 +264,16 @@ a {
   display: block;
 }
 
-    .plot{
-      width:600px;
-      height:400px;
-    }
-.bulet {}
+.plot {
+    width: 100%;
+    height: calc(100vw * 0.75);
+    max-height: 500px; 
+    min-height: 300px; 
+}
 
-/* Reset margin dan padding */
+
+
+
 body,
 h1,
 p,
@@ -359,13 +282,7 @@ div {
   padding: 0;
 }
 
-/*body {
-  font-family: Arial, sans-serif;
-}
-*/
 
-
-/* Agar toggle dan konten berada dalam satu baris */
 .toggle {
   cursor: pointer;
   display: flex;
@@ -387,14 +304,12 @@ div {
   transition: transform 0.3s ease;
 }
 
-/* Jika tombol toggle sudah terbuka */
 .toggle.open .arrow {
   transform: rotate(-135deg);
 }
 
 
 
-/* Styling untuk konten */
 .content {
   display: none;
   transition: opacity 0.3s ease-in-out;
@@ -406,29 +321,40 @@ div {
   opacity: 1;
 }
 
-/*.content.hidden {
-  opacity: 0;
-}*/
 
-/* Styling untuk paragraph di dalam konten */
 p {
-  font-size: 16px;
+  font-size: 25px;
   color: #333;
   text-align: justify;
   margin: 20px;
 }
 
-.rumus{
-  font-size: 17px;
-  background-color: #3A2E3F;
-  color: #222;
-  margin-top: 10px;
-  width: auto;
-  color: #fff;
+.rumus {
+    font-weight: normal;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #3A2E3F;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    white-space: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
+.bg-langkah{
+  font-weight: normal;
+    display: flex;  
+    margin: 20px auto;
+    text-align: center;
+    background-color: #3A2E3F;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-/* General Footer Styles */
 .footer {
   background-color: #222;
   color: #fff;
@@ -438,7 +364,6 @@ p {
   box-sizing: border-box;
 }
 
-/* Footer content */
 .footer-content {
   align-items: center;
   max-width: 1200px;
@@ -454,7 +379,6 @@ p {
   letter-spacing: 2px;
 }
 
-/* Footer links */
 .footer-links ul {
   list-style-type: none;
   display: flex;
@@ -475,7 +399,6 @@ p {
   color: #CFB7EC;
 }
 
-/* Footer Social Icons */
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -493,7 +416,6 @@ p {
   color: #CFB7EC;
 }
 
-/* Footer Bottom Section */
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9em;
@@ -504,7 +426,6 @@ p {
   margin: 0;
 }
 
-/* Responsive Footer Styles */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -523,6 +444,8 @@ p {
   .footer-socials {
     margin-top: 20px;
   }
+
+
 }
 
 .team-container {
@@ -608,12 +531,10 @@ p {
   width: 80%;
   max-width: 900px;
   height: 700px;
-  /* Meningkatkan tinggi grafik */
   border: 1px solid #ccc;
 }
 
-input,
-button {
+input {
   padding: 10px;
   font-size: 16px;
   margin-top: 20px;
@@ -642,7 +563,6 @@ button:hover {
   border-radius: 5px;
   overflow-y: auto;
   max-height: 300px;
-  /* Batas maksimal tinggi */
 }
 
 .step {
@@ -670,6 +590,7 @@ button:hover {
   border: none;
   transition: all 0.3s ease;
   font-size: 20px;
+  width: 25em;
 }
 
 .btn-quiz:hover {
@@ -680,6 +601,8 @@ button:hover {
 .center {
   justify-content: center;
   align-content: center;
+  display: flex;
+
 }
 
 .soal {
@@ -724,49 +647,81 @@ button:hover {
 }
 
 
-/* Media Query untuk layar kecil (320px) */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 430px) {
     .zigzag-background {
-        padding: 10px; /* Mengurangi padding agar lebih rapi di layar kecil */
+        padding: 10px; 
+    }
+    .MJXc-display{
+      font-size: 10px!important;
     }
 
     .image {
-        width: 85%; /* Membuat gambar responsif agar ukuran gambar menyesuaikan layar */
+        width: 85%; 
         height: auto;
         margin: auto!important;
         display: flex;
         margin-bottom: 20px!important;
 
     }
+.js-plotly-plot .plotly .modebar {
+  right: 0px!important
+}
+    .margin-2{
+      margin: 15px;
+    }
 
+    .kanan{
+      display: block!important;
+    }
+
+    .btn-grafik{
+      height: 3.5em!important;
+    }
+
+    button{
+      margin: 10px 0!important;
+    }
+.bg-langkah{
+  max-width: 100%!important;
+}
     .container-2 {
-        padding: 10px; /* Mengurangi padding pada container agar lebih sesuai dengan layar kecil */
+        padding: 10px;
         flex-wrap: wrap;
     }
 
     .padding{
       padding: 0;
-=    }
+    }
 
-    /* Mengurangi ukuran teks dan elemen lainnya untuk layar 320px */
+    .font-20px{
+        font-size: 12px!important;
+    }
+    
+
     .judul {
         font-size: 20px!important;
     }
 
-    .rumus{
-      font-size: 13px!important;
+    .rumus {
+        font-size: 13px !important;  
+        max-width: 90%; 
+        padding: 5px;  
     }
-    .con-bentuk{
-      width: auto!important;
-      font-size: 14px!important;
+
+    .rumus-grafik {
+        font-size: 6px !important;  
+        max-width: auto;  
     }
+
 
     a .nav-link{
       font-size: 12px!important;
     }
-
+  .j-sifat{
+    font-size: 14px!important;
+  }
     p{
-      font-size: 12px!important;
+      font-size: 13px!important;
     }
     .img-1{
       width: 100px;
@@ -775,7 +730,9 @@ button:hover {
     h2{
       font-size: 20px!important;
     }
-
+    .con-bentuk{
+      font-size: 14px !important;
+      }
     .nav-link {
         font-size: 14px; /* Menyesuaikan ukuran font pada navbar */
     }
@@ -792,27 +749,23 @@ button:hover {
       font-size: 12px;
     }
     .btn-quiz {
-        font-size: 14px; /* Menyesuaikan ukuran tombol quiz */
+        font-size: 14px; 
     }
 
     .exp1{
-  font-size: 25px;
-}
+      font-size: 25px;
+    }
 
 .math1{
     font-size: 15px;
 }
-    .plot{
-      width:100%;
-      height:400px;
-    }
 
     .con-p p{
       margin: 0!important;
     }
 
     .footer p {
-        font-size: 12px; /* Menyesuaikan ukuran font footer */
+        font-size: 12px; 
     }
 
     .con-p{
@@ -829,25 +782,28 @@ button:hover {
     }
 
     .con-kalkulator{
-      margin: 10px auto!important;
+      margin: auto!important;
+      padding: 0!important;
     }
     .nav-links{
       justify-content: center;
       margin: auto;
     }
     .btn-quiz{
-      width: 90%!important;
+      width: 17em!important;
     }
     .team-container{
       margin-top: 10px!important;
     }
 
       body {
-    font-size: 14px; /* Menyesuaikan ukuran font untuk layar kecil */
+    font-size: 14px; 
   }
 
+
+
   .container {
-    padding: 50px 10px; /* Memberikan ruang di sekitar konten */
+    padding: 50px 10px; 
     max-width:  100%;
     display: flex;
     flex-wrap: wrap;
@@ -876,7 +832,7 @@ button:hover {
 
   .nav a {
     display: block;
-]    text-decoration: none;
+    text-decoration: none;
     font-size: 12px;
   }
 
@@ -898,7 +854,24 @@ button:hover {
   h1{
     font-size: 25px!important;
   }
+
+  .content .con-p{
+    width: 97%!important;
+    margin: 5px!important;
+  }
+
+  .space-beetwen{
+    justify-content: center;
+  }
+
+
 }
+
+
+
+
+
+
 
 
 .margin-40px {
@@ -917,14 +890,11 @@ button:hover {
   background-color: white;
   /* Warna latar belakang kotak */
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   width: 100%;
   max-width: 660px;
   /* Maksimal lebar kotak */
-  align-items: center;
   justify-content: center;
-  display: grid;
   margin-right: 40px;
 }
 
@@ -972,13 +942,7 @@ button:hover {
   /* Efek hover dengan gradien terbalik */
 }
 
-#plot {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  padding: 10px;
-}
+
 
 #steps {
   margin-top: 20px;
@@ -987,13 +951,16 @@ button:hover {
 .con-bentuk{
   color: #fff;
   background-color: #58496A;
-  width: 20%;
+  width: auto;
   padding: 20px;
   text-align: center;
   border-radius: 20px;
   font-size: 20px;
   font-weight: bold;
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
   margin: 20px;
+
 }
 
 .con-p{
@@ -1001,7 +968,7 @@ button:hover {
   background-color: #58496A;
   color: #fff;
   background-color: #58496A;
-  width: 45%;
+  width: auto;
   padding: 35px;
   text-align: center;
   border-radius: 20px;
@@ -1020,22 +987,103 @@ button:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.font{
-  font-family: Lato, serif;
-}
 
 
 
-/* CSS untuk efek fade-in saat scroll */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);  /* Konten akan dimulai di bawah */
+  transform: translateY(20px); 
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Ketika elemen sudah berada dalam jangkauan viewport */
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);  /* Elemen akan bergerak ke posisi semula */
+  transform: translateY(0);
 }
-import 'animate.css';
+
+
+.kiri {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.kiri p {
+    flex-basis: 48%;  
+    margin-bottom: 10px;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+
+.con-p h2{
+  color: #fff;
+}
+
+.con-p p{
+  color: #fff;
+  display: block;
+}
+
+.langkah p{
+  display: block !important;
+  color: #333;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 20px;
+
+}
+
+.rumus-grafik{
+  font-size: 19px;
+  color: #fff;
+}
+
+.langkah h2{
+  margin: 20px;
+  font-size: 25px;
+}
+
+
+
+.con-p, .j-sifat{
+  font-size: 20px;
+}
+
+.MJXc-display {
+    display: inline-block !important;
+    text-align: left !important; 
+    margin: 15px 0 30px 20px!important;
+}
+
+.font-15px{
+  font-size: 15px!important
+}
+
+.font-10px{
+  font-size: 10px!important;
+}
+
+.font-20px{
+  font-size: 20px;
+}
+
+.kanan{
+  margin: auto 0;
+  margin-left: auto;
+
+}
+
+.img-grafik{
+ width: 100%; 
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.btn-grafik{
+  height: 4.5em;
+  margin-top: 50px;
+}
