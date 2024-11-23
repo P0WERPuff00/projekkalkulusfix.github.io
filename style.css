@@ -9,7 +9,7 @@ body {
   font-family: 'arial', sans-serif;
   font-weight: 400;
     line-height: 1.6;
-    color: #333; 
+    color: #333; /* Dark gray for readability */
     font-size: 16px;
 
 }
@@ -96,7 +96,9 @@ body {
 .zigzag-background {
   background-position: center;
     height: 35em;
-}
+
+/*  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.3);
+*/}
 
 .padding{
   padding: 8em 3em 0em 8em;
@@ -144,6 +146,82 @@ a {
   background: linear-gradient(to bottom, #58496A, #222222);
 }
 
+/*.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #58496A;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: none; 
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+.menu-toggle {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+.nav-links.active {
+  display: flex;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  background-color: #333;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+
+.nav-links li a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #CFB7EC;
+}*/
+
+
+
+/*.nav {
+  display: flex; 
+  align-items: center;
+  background-color: #58496A;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+
+}*/
+
 
 #plot{
   margin-top: 60px;
@@ -162,6 +240,34 @@ a {
     vertical-align: 15px;
     font-weight: normal;
 }
+/*
+.nav {
+  background-color: #58496A;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  
+
+  padding: 1rem 2rem;
+}
+
+.nav-link {
+  color: white; 
+  padding: 15px 20px; 
+  transition: background-color 0.3s, color 0.3s;  
+}
+
+.a{
+  color: white; 
+  padding: 15px 20px; 
+  transition: background-color 0.3s, color 0.3s; 
+  text-decoration: none; 
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: #CFB7EC; 
+  border-radius: 5px; 
+}
+*/
+
 
 
 .nav-link {
@@ -188,7 +294,8 @@ a {
   height: 8em;
   width: 28em;
   border-radius: 10px;
-
+/*  background-color: #58496A;
+*/  
   align-items: center;
   justify-content: center;
   color: white;
@@ -226,9 +333,11 @@ a {
 
 .container-2 p {
   font-size: 20px;
+  /* Ukuran font teks */
   color: #333;
   display: flex;
-  align-items: center;    
+  /* Warna teks untuk paragraf */
+  align-items: center;     /* Tengah secara vertikal */
 }
 
 .margin-t-25{
@@ -266,14 +375,15 @@ a {
 
 .plot {
     width: 100%;
-    height: calc(100vw * 0.75);
-    max-height: 500px; 
-    min-height: 300px; 
+    height: calc(100vw * 0.75); /* Tinggi grafik menjadi 75% dari lebar layar */
+    max-height: 500px; /* Memberikan batas maksimum untuk tinggi grafik */
+    min-height: 300px; /* Memberikan batas minimum untuk tinggi grafik */
 }
 
 
+.bulet {}
 
-
+/* Reset margin dan padding */
 body,
 h1,
 p,
@@ -282,7 +392,13 @@ div {
   padding: 0;
 }
 
+/*body {
+  font-family: Arial, sans-serif;
+}
+*/
 
+
+/* Agar toggle dan konten berada dalam satu baris */
 .toggle {
   cursor: pointer;
   display: flex;
@@ -304,12 +420,14 @@ div {
   transition: transform 0.3s ease;
 }
 
+/* Jika tombol toggle sudah terbuka */
 .toggle.open .arrow {
   transform: rotate(-135deg);
 }
 
 
 
+/* Styling untuk konten */
 .content {
   display: none;
   transition: opacity 0.3s ease-in-out;
@@ -321,7 +439,11 @@ div {
   opacity: 1;
 }
 
+/*.content.hidden {
+  opacity: 0;
+}*/
 
+/* Styling untuk paragraph di dalam konten */
 p {
   font-size: 25px;
   color: #333;
@@ -331,7 +453,7 @@ p {
 
 .rumus {
     font-weight: normal;
-    display: block;
+    display: block;  /* Ganti inline-block dengan block */
     margin: 20px auto;
     text-align: center;
     background-color: #3A2E3F;
@@ -345,7 +467,7 @@ p {
 
 .bg-langkah{
   font-weight: normal;
-    display: flex;  
+    display: flex;  /* Ganti inline-block dengan block */
     margin: 20px auto;
     text-align: center;
     background-color: #3A2E3F;
@@ -355,6 +477,7 @@ p {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* General Footer Styles */
 .footer {
   background-color: #222;
   color: #fff;
@@ -364,6 +487,7 @@ p {
   box-sizing: border-box;
 }
 
+/* Footer content */
 .footer-content {
   align-items: center;
   max-width: 1200px;
@@ -379,6 +503,7 @@ p {
   letter-spacing: 2px;
 }
 
+/* Footer links */
 .footer-links ul {
   list-style-type: none;
   display: flex;
@@ -399,6 +524,7 @@ p {
   color: #CFB7EC;
 }
 
+/* Footer Social Icons */
 .footer-socials {
   display: flex;
   justify-content: center;
@@ -416,6 +542,7 @@ p {
   color: #CFB7EC;
 }
 
+/* Footer Bottom Section */
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9em;
@@ -426,6 +553,7 @@ p {
   margin: 0;
 }
 
+/* Responsive Footer Styles */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -531,6 +659,7 @@ p {
   width: 80%;
   max-width: 900px;
   height: 700px;
+  /* Meningkatkan tinggi grafik */
   border: 1px solid #ccc;
 }
 
@@ -563,6 +692,7 @@ button:hover {
   border-radius: 5px;
   overflow-y: auto;
   max-height: 300px;
+  /* Batas maksimal tinggi */
 }
 
 .step {
@@ -647,6 +777,7 @@ button:hover {
 }
 
 
+/* Responsive layar kecil (320px) */
 @media screen and (max-width: 430px) {
     .zigzag-background {
         padding: 10px; 
@@ -663,7 +794,7 @@ button:hover {
         margin-bottom: 20px!important;
 
     }
-.js-plotly-plot .plotly .modebar {
+.modebar {
   right: 0px!important
 }
     .margin-2{
@@ -703,14 +834,14 @@ button:hover {
     }
 
     .rumus {
-        font-size: 13px !important;  
-        max-width: 90%; 
-        padding: 5px;  
+        font-size: 13px !important;  /* Mengatur ukuran font lebih kecil untuk layar kecil */
+        max-width: 90%;  /* Sesuaikan lebar kontainer */
+        padding: 5px;  /* Kurangi padding agar lebih pas di layar kecil */
     }
 
     .rumus-grafik {
-        font-size: 6px !important;  
-        max-width: auto;  
+        font-size: 6px !important;  /* Sesuaikan ukuran font pada grafik */
+        max-width: auto;  /* Kurangi lebar grafik agar bisa menyesuaikan */
     }
 
 
@@ -749,7 +880,7 @@ button:hover {
       font-size: 12px;
     }
     .btn-quiz {
-        font-size: 14px; 
+        font-size: 14px; /* Menyesuaikan ukuran tombol quiz */
     }
 
     .exp1{
@@ -765,7 +896,7 @@ button:hover {
     }
 
     .footer p {
-        font-size: 12px; 
+        font-size: 12px; /* Menyesuaikan ukuran font footer */
     }
 
     .con-p{
@@ -990,27 +1121,30 @@ button:hover {
 
 
 
+/* CSS untuk efek fade-in saat scroll */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px); 
+  transform: translateY(20px);  /* Konten akan dimulai di bawah */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Ketika elemen sudah berada dalam jangkauan viewport */
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0);  /* Elemen akan bergerak ke posisi semula */
 }
+import 'animate.css';
 
 
 .kiri {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;  /* Memastikan konten membungkus ke baris berikutnya jika diperlukan */
     justify-content: space-between;
     margin: 5px 0;
 }
 
 .kiri p {
-    flex-basis: 48%;  
+    flex-basis: 48%;  /* Memberikan ruang untuk setiap elemen agar tidak terlalu besar */
     margin-bottom: 10px;
 }
 
@@ -1055,7 +1189,7 @@ button:hover {
 
 .MJXc-display {
     display: inline-block !important;
-    text-align: left !important; 
+    text-align: left !important;  /* Mengatur perataan teks ke kiri */
     margin: 15px 0 30px 20px!important;
 }
 
