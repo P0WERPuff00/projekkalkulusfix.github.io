@@ -5,24 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-           <link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 
 
-	   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+
 
 	<title>Halaman utama</title>
 <ul class="nav align-center">
 
   <li class="nav-item">
-    <a class="a bungee-tint-regular flex font" href="#"><b class="exp">Exp</b><span class="math">Math</span></a>
+    <a class="a bungee-tint-regular flex font" href="#"><b class="font exp">Exp</b><span class="font math">Math</span></a>
   </li>
   <div class="nav-links ">
     <li class="nav-item">
@@ -40,32 +48,13 @@
   </div>
 </ul>
 
-
- <!--  <nav class="navbar">
-    <div class="logo">
-      <a href="#">TURUNAN</a>
-    </div>
-
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i> 
-    </div>
-
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#"><i class="fas fa-home"></i></a></li>
-      <li><a href="#">Teori</a></li>
-      <li><a href="#">Kalkulator</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
- -->
 </head> 
 <body>
   <div class="zigzag-background">
     
         <div class="flex" style="margin-top: 9em;">
         <div class="padding">
-  <h1 class="animate__zoomInUp" style="color: #222; font-weight: bold; font-size: 50px; font-family: Lato, serif;">Bersama <b class="exp1">Exp</b><span class="math1">Math</span>
+  <h1 style="color: #222; font-weight: bold; font-size: 50px; font-family: Lato, serif;">Bersama <b class="exp1">Exp</b><span class="math1">Math</span>
 , Belajar Eksponensial Jadi Lebih Mudah dan Menyenangkan!</h1>
   <span class="a">Pengertian, bentuk umum, aturan fungsi, konsep rumus, sifat-sifat, contoh soal dan grafik serta quiz.</span>
     </div>
@@ -76,15 +65,13 @@
   </div>
   <div id="teori"></div>
 
-<div class="container-induk">
 
   <div class="container">
     <div class="container-2 fade-in">
       
         <div>
-          <h1 class="judul">Apa itu eksponensial?</h1>
+          <h1 class="judul margin-20">Apa itu eksponensial?</h1>
         </div>
-<!--         <span class="toggle" id="toggleButton1"><div class="bulet">▼</div></span> -->
     <div class="flex">
       <div class="">
         <img class="img-1" src="1.png" alt="Eksponensial">
@@ -104,18 +91,21 @@
       </div>
         <p style="margin: 20px 0;">
         <div class="center flex">
-          <div class="con-bentuk">
-            f(x) = a^x
-          </div>
+<div class="con-bentuk">
+        \( f(x) = a^x \)
+    </div>
         </div>
           <br>
 
 <div class="keterangan">
     <b style="color: #58496A;"> Keterangan: </b>
     <br>
+    <span style="display: inline-block;
+  font-family: 'Times New Roman', Times, serif;">
     a: konstanta
     <br>
     x: variabel
+    </span>
 </div>
 <br>
 <br>
@@ -158,59 +148,255 @@ Jika a>0, dan b>0, maka pernyataan berikut berlaku untuk semua bilangan riil x d
       Rumus 2: f(x) = a (1 - r)x
       </span>
     </div>
+
+
 </div>
+
     </div>
-  </div>
+<div class="container-2 fade-in">
+  <div class="flex">
+  <div>
+        <h1 class="judul" style="margin: 20px;">Sifat-sifat Eksponensial</h1>
+        </div>
+        <div class="kanan">
+        <span class="toggle" id="toggleButton1"><div class="bulet">▼</div></span>
+        </div>
 </div>
-
-
-
-
-
-<div class="flex">
-<div class="con">
-<div class="con-soal">
-  <h2>itung Fungsi Eksponensial dan Tampilkan Grafik</h2>
-  <p></p>
-</div>
-
-<div class="con-soal">
-  <h2>itung Fungsi Eksponensial dan Tampilkan Grafik</h2>
-  <p></p>
-</div>
-</div>
-
-
-<div id="kalkulator"></div>
-      <div class="con-kalkulator" >
-          <h2>Hitung Fungsi Eksponensial dan Tampilkan Grafik</h2>
-          <label for="base">Masukkan basis (a):</label>
-          <input type="number" id="base" value="2"><br>
-
-          <label for="exponent">Masukkan ekspresi eksponen (contoh: x+3):</label>
-          <input type="text" id="exponent" value="x+3"><br>
-
-          <label for="x_values">Masukkan nilai-nilai x (pisahkan dengan koma, contoh: -5,-4,-3,...,5):</label>
-          <input type="text" id="x_values" value="-5,-4,-3,-2,-1,0,1,2,3,4,5"><br>
-
-          <button onclick="plotExponential()">Hitung dan Tampilkan Grafik</button>
-        <div>
-
-          <div id="plot" class="plot" style=""></div>
-          <div id="steps" style="margin-top: 20px;"></div>
+<div class="content " style="" id="content1">
+  <div class="flex space-between con-p margin-t-25">
+        <div class="kiri">
+            <p class="text-white j-sifat">1. Pangkat Penjumlahan:</p>
+            <p class="text-white">
+                \[
+                a^x \cdot a^y = a^{x + y}
+                \]
+            </p>
+            <p class="text-white j-sifat">2. Pangkat Pengurangan:</p>
+            <p class="text-white">
+                \[
+                \frac{a^x}{a^y} = a^{x - y}
+                \]
+            </p>
+            <p class="text-white j-sifat">3. Pangkat Perkalian:</p>
+            <p class="text-white ">
+                \[
+                (a^x)^y = a^{x \cdot y}
+                \]
+            </p>
+            <p class="text-white j-sifat">4. Perkalian Bilangan yang Dipangkatkan:</p>
+            <p class="text-white">
+                \[
+                a^x \cdot b^x = (a \cdot b)^x
+                \]
+            </p>
+        
         </div>
 
+        <div class="kiri">
+             <p class="text-white j-sifat">5. Pembagian Bilangan yang Dipangkatkan:</p>
+            <p class="text-white">
+                \[
+                \left(\frac{a}{b}\right)^x = \frac{a^x}{b^x}
+                \]
+            </p>
+            <p class="text-white j-sifat">6. Pangkat Nol:</p>
+            <p class="text-white">
+                \[
+                a^0 = 1
+                \]
+            </p>
+            <p class="text-white j-sifat">7. Pangkat Negatif:</p>
+            <p class="text-white">
+                \[
+                a^{-x} = \frac{1}{a^x}
+                \]
+            </p>
+        </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-2 fade-in">
+  <div class="flex">
+  <div>
+<h1 class="judul margin-20">Langkah-Langkah Menentukan Grafik Fungsi Eksponensial</h1>
+        </div>
+        <div class="kanan flex">
+        <span class="toggle" id="toggleButton2"><div class="bulet">▼</div></span></div>
+</div>
+<div class="content " style="" id="content2">
+  <div class="flex space-between langkah" style="text-align: left !important; font-weight: normal;">
+        <div class="kiri">
+            
+
+  <h2 class="judul margin-20">1. Tentukan Nilai Basis <span style="font-size: 25px!important;">\(a\)</span> dan Jenis Fungsi</h2>
+  <p>Jika \( a > 1 \), fungsi akan menunjukkan <b>pertumbuhan eksponensial</b>. Grafiknya akan meningkat tajam saat  \(x\)  bertambah besar.</p>
+  <p class="text-white bg-langkah font-20px">
+    \[
+    f(x) = a^x \quad \text{dengan} \quad a > 1
+    \]
+  </p>
+  
+  <p>Jika \( 0 < a < 1 \), fungsi akan menunjukkan <b>peluruhan eksponensial</b>. Grafiknya akan menurun tajam saat \(x\) bertambah besar.</p>
+  <p class="text-white bg-langkah font-20px">
+    \[
+    f(x) = a^x \quad \text{dengan} \quad 0 < a < 1
+    \]
+  </p>
+
+  <p>Jika \( a = 1 \), fungsi akan menjadi <b>konstan</b>, yaitu \( f(x) = 1 \) untuk semua nilai \( x \).</p>
+  <p class="text-white bg-langkah font-20px">
+    \[
+    f(x) = 1 \quad \text{untuk semua} \quad x
+    \]
+  </p>
+
+  <p>Jika \( a < 0 \), biasanya kita tidak menggunakan basis negatif untuk fungsi eksponensial dalam konteks ini, karena hasilnya tidak selalu <b>real</b> (tergantung pada \( x \)).</p>
+
+  <h2>2. Perhatikan Asimtot Horizontal</h2>
+  <p>Fungsi eksponensial memiliki <b>asimtot horisontal</b> pada \( y = 0 \), artinya grafik akan mendekati \( y = 0 \) tetapi tidak pernah menyentuhnya. Ini berlaku baik untuk fungsi pertumbuhan eksponensial (misalnya \( f(x) = 2^x \)) maupun peluruhan eksponensial (misalnya \( f(x) = \left(\frac{1}{2}\right)^x \)).</p>
+  <p class="text-white bg-langkah font-20px">
+    \[
+    \lim_{x \to \infty} f(x) = 0 \quad \text{dan} \quad \lim_{x \to -\infty} f(x) = \infty
+    \]
+  </p>
+
+  <h2>3. Tentukan Beberapa Titik Penting</h2>
+  <p>Untuk menggambar grafik, kita bisa menghitung beberapa titik dengan memasukkan nilai \( x \) yang berbeda ke dalam fungsi \( f(x) = a^x \). Beberapa titik penting yang bisa dihitung adalah:</p>
+  <ul>
+    <li class="font-20px"> \( f(0) = a^0 = 1 \) (setiap fungsi eksponensial memiliki titik \( (0, 1) \)) </li>
+    <li class="font-20px"> \( f(1) = a^1 = a \) </li>
+    <li class="font-20px"> \( f(-1) = a^{-1} = \frac{1}{a} \) </li>
+  </ul>
+
+  <h2>4. Pertumbuhan atau Peluruhan</h2>
+  <p>Jika \( a > 1 \), grafik akan terus naik ke atas seiring dengan bertambahnya nilai \( x \), semakin curam seiring \( x \) semakin besar.</p>
+  <p>Jika \( 0 < a < 1 \), grafik akan turun menuju \( y = 0 \) seiring bertambahnya \( x \).</p>
+
+  <h2>5. Perhatikan Arah Grafik Saat \( x \to \infty \) dan \( x \to -\infty \)</h2>
+  <p class="font-20px">Jika \( a > 1 \):
+    <ul>
+      <li class="font-20px">Saat \( x \to \infty \), \( f(x) \to \infty \)</li>
+      <li class="font-20px">Saat \( x \to -\infty \), \( f(x) \to 0 \)</li>
+    </ul>
+  </p>
+  <p>Jika \( 0 < a < 1 \):
+    <ul>
+      <li class="font-20px">Saat \( x \to \infty \), \( f(x) \to 0 \)</li>
+      <li class="font-20px">Saat \( x \to -\infty \), \( f(x) \to \infty \)</li>
+    </ul>
+  </p>
+        </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="flex">
+    <div class="con">
+      <div class="con-soal">
+        <h2 style="color: #58496A !important; font-weight: bold;">Contoh Soal Fungsi Eksponensial dan Grafiknya</h2>
+        <div class="center flex">
+        <div class="con-bentuk">1. \( F(x) = 3^x \)</div>
+        </div>
+        <p style="font-size: 20px;"><b>Cara pengerjaan :</b></p>
+        <ul>
+          <li>Untuk \( x = 0 \):</li>
+          <p class="font-20px">\( f(0) = 3^0 = 1 \)</p>
+        </ul>
+        <ul>
+          <li>Untuk \( x = 1 \)</li>
+          <p class="font-20px">\( f(1) = 3^1 = 3 \)</p>
+        </ul>
+        <ul>
+          <li>Untuk \( x = 2 \)</li>
+          <p class="font-20px">\( f(2) = 3^2 = 9 \)</p>
+        </ul>
+        <br>
+        <p style="font-size: 20px;">Berikut grafik\( F(x) = 3^x \) :</p>
+        <img class="img-grafik" src="newplot copy.png" alt="grafik 1">
+
       </div>
+
+      <div class="con-soal">
+        <h1>Contoh Soal Fungsi Eksponensial dan Grafiknya</h1>
+        <div class="center flex">
+        <div class="con-bentuk">2. \( f(x) = 2^{x+2} \)</div>
+      </div>
+        <p style="font-size: 20px;"><b>Cara Pengerjaan:</b></p>
+        <ul>
+          <li>Untuk \( x = 0 \)</li>
+          <p class="font-20px">\( f(0) = 2^0 + 2 = 2^2 = 4\)</p>
+        </ul>
+        <ul>
+          <li>Untuk \( x = 1 \)</li>
+          <p class="font-20px">\( f(1) = 2^1 + 2 = 2^3 = 8\)</p>
+        </ul>
+        <ul>
+          <li>Untuk \( x = 2 \)</li>
+          <p class="font-20px">\( f(2) = 2^2 + 2 = 2^4 = 16 \)</p>
+        </ul>
+        <img class="img-grafik" src="newplot (2).png" alt="grafik 2" >
+      </div>
+    </div>
+
+
+    <div id="kalkulator"></div>
+
+    <div class="con-kalkulator">
+      <div class="margin-2">
+      <h2>Hitung Fungsi Eksponensial dan Tampilkan Grafik</h2>
+      <div class="basis">
+        <label for="base">Basis (a):</label>
+        <input type="number" id="base" value="2"><br>
+      </div>
+
+      <div class="eksponen">
+        <label for="exponent">Ekspresi eksponen (contoh: x+3):</label>
+        <input type="text" id="exponent" value="x+3"><br>
+      </div>
+
+      <div class="x_values">
+        <label for="x_values">Nilai x (pisahkan dengan koma, contoh: -5,-4,-3,...,5):</label>
+        <input type="text" id="x_values" value="-5,-4,-3,-2,-1,0,1,2,3,4,5"><br>
+      </div>
+
+      <div class="consttambahan">
+        <label for="constant">Konstanta tambahan : </label>
+        <input type="number" id="constant" value="3"><br>
+      </div>
+
+      <button class="btn-grafik" onclick="plotExponential()">Hitung dan Tampilkan Grafik</button>
+      <button class="btn-grafik" onclick="resetForm()">Reset</button>
+</div>
+      <div style="max-width: 100%; margin: 0!important; padding: 0!important;">
+        <div id="plot" class="plot"></div>
+        <div class="margin-2">
+        <div id="steps" style="margin-top: 20px;"></div>
+      </div>
+      </div>
+
+    </div>
   </div>
   <div id="quiz"></div>
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#58496A" fill-opacity="1" d="M0,64L40,74.7C80,85,160,107,240,101.3C320,96,400,64,480,90.7C560,117,640,203,720,234.7C800,267,880,245,960,208C1040,171,1120,117,1200,90.7C1280,64,1360,64,1400,64L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 <div class="bg-purple-2">
 
 <br>
 <br>
 <div class="center ">
-  <a href="quiz.html"><button style=" display: grid;  max-width: 25em !important; margin: auto; " class="btn-quiz">Ayo mulai Quiz!</button></a>
+  <a href="quiz.html"><button style=" display: grid;  margin: auto; " class="btn-quiz">Ayo mulai Quiz!</button></a>
 </div>
+
 
 
 <div class="team-container">
@@ -219,7 +405,7 @@ Jika a>0, dan b>0, maka pernyataan berikut berlaku untuk semua bilangan riil x d
         <h3>Nanda Raissa</h3>
         <p>247006111108</p>
         <div class="social-links">
-            <a href="https://instagram.com/johndoe" target="_blank">
+            <a href="https://www.instagram.com/nanda_rsa?igsh=ajhxcXB1cHd0azlw" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
@@ -261,10 +447,8 @@ Jika a>0, dan b>0, maka pernyataan berikut berlaku untuk semua bilangan riil x d
 </div>
 </div>
 
-<!-- External Font Awesome for icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<!-- Footer Section -->
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-logo font">
@@ -281,8 +465,9 @@ Jika a>0, dan b>0, maka pernyataan berikut berlaku untuk semua bilangan riil x d
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
-    <script type="text/javascript" src="script.js"></script>
 
 
 </body>
 </html>
+
+
