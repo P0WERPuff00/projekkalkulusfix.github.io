@@ -3,104 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soal Pilihan Ganda</title>
+    <title>Quiz dengan Penjelasan - MathJax</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        /* Styling untuk body */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+    font-size: 16px !important;
+}
+
+
+.quiz-container {
+    background: linear-gradient(135deg, #f2f2f2, #d9d9d9);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 80vh; 
+}                                                                                                                                                                            .center {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: #f2f2f2;
+    border-radius: 15px;
+}
+                                                                                                                                                                                                                         
+
+
+/* Hasil skor */
+.quiz-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.quiz-result-container {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.quiz-result-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.quiz-result-details {
+    margin-bottom: 10px;
+}
+
+.quiz-result-details p {
+    margin: 5px 0;
+}
+
+.quiz-result-question {
+    font-weight: bold;
+}
+
+@media (max-width: 430px) {
+    .quiz-result-container {
+        padding: 20px;
+    }
+
+    .quiz-title {
+        font-size: 25px!important;
+    }
+
+    .quiz-result-score {
+        font-size: 1.2rem;
+    }
+
+    .quiz-result-details p {
+        font-size: 0.9rem;
+    }
+
+    .quiz-result-question {
+        font-size: 1.1rem;
+    }
+
+    .quiz-container {
+        padding: 20px;
+        max-height: 90vh;
+    }
+    .quiz-question {
+        font-size: 18px!important;
+    }
+                .quiz-option {
+                font-size: 1rem;
+                padding: 12px;
+            }
+                        .next-button {
+                font-size: 0.9rem;
+                padding: 10px 25px;
+            }
+            .timer {
+                font-size: 1.2rem;
+            }
+            .start-button {
+                font-size: 0.9rem;
+                padding: 10px 25px;
+            }
+                            mjx-container {
+        font-size: 80%;
+    }
+}
+
+
+
+
+        .quiz-container {
+            background: linear-gradient(135deg, #f2f2f2, #d9d9d9);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: none;
+            overflow-x: auto;
+        }
+        .quiz-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2C3E50;
+        }
+        .quiz-question {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #34495E;
+        }
+        .quiz-options {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f1f1f1;
-            color: #333;
+            flex-direction: column;
+            gap: 15px;
         }
-
-        /* Kontainer utama dengan latar belakang putih */
-        .kontainer {
-            background-color: #fff; /* Latar belakang putih */
-            padding: 30px; /* Padding di sekitar konten */
-            border-radius: 10px; /* Sudut melengkung */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-            width: 100%;
-            max-width: 500px; /* Membatasi lebar kontainer */
-            text-align: center;
-                       justify-content: center;
-            align-items: center;
-
-        }
-
-        /* Styling untuk soal */
-        .pertanyaan {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 30px; /* Spasi antara soal dan pilihan */
-            color: #2d2d2d;
-            line-height: 1.5;
-        }
-
-        /* Container grid untuk tombol */
-        .button-container {
-            display: grid; /* Menggunakan Grid */
-            grid-template-columns: repeat(2, 1fr); /* Membuat dua kolom dengan ukuran yang sama */
-            gap: 35px; /* Jarak antar tombol */
-            max-width: 400px; /* Membatasi lebar kontainer tombol */
-            width: 100%;
-            margin-top: 20px;
-            align-items: center; /* Menjaga tombol tetap berada di tengah vertikal */
-            margin: auto;
-        }
-
-        /* Styling untuk tombol */
-        .button {
-            background-color: #4CAF50; /* Warna latar belakang hijau */
+        .quiz-option {
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 30px;
             border: none;
+            background-color: #58496A;
             color: white;
-            padding: 35px;
-            font-size: 16px;
-            text-align: center;
-            border-radius: 8px;
-
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
-            min-width: 120px; /* Agar tombol tidak terlalu kecil */
+            transition: all 0.3s ease;
+        }
+        .quiz-option:hover {
+            background-color: #432E4B;
+        }
+        .quiz-option.selected {
+            background-color: #2E2E2E;
+        }
+        .quiz-controls {
+            margin-top: 30px;
+        }
+        .next-button {
+            background-color: #58496A;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .next-button:hover {
+            background-color: #432E4B;
+        }
+        .timer {
+            font-size: 1.5rem;
+            color: #E74C3C;
+            margin-bottom: 20px;
+        }
+        .intro-container {
+            text-align: center;
+            max-width: 600px;
+        }
+        .start-button {
+            background-color: #58496A;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .start-button:hover {
+            background-color: #432E4B;
         }
 
-        /* Efek hover untuk tombol */
-        .button:hover {
-            background-color: #45a049;
-            transform: translateY(-4px); /* Tombol sedikit terangkat saat hover */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
-        }
 
-        /* Efek aktif pada tombol */
-        .button:active {
-            transform: translateY(2px); /* Menekan tombol sedikit */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+mjx-container {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 90%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
 
     </style>
 </head>
 <body>
-
-    <!-- Kontainer utama dengan latar belakang putih -->
-    <div class="kontainer">
-        <!-- Soal Pilihan Ganda -->
-        <div class="pertanyaan">
-            Tentukan nilai dari \( f(x) = 2x + 3 \) pada \( x = 4 \).
-        </div>
-        
-        <!-- Kontainer Tombol Pilihan Ganda -->
-        <div class="button-container">
-            <button class="button">A. 13</button>
-            <button class="button">B. 11</button>
-            <button class="button">C. 8</button>
-            <button class="button">D. 15</button>
-        </div>
+<div class="center">
+    <div class="intro-container">
+        <h2>Selamat datang di Quiz Exponensial!</h2>
+        <p>Pilih "Mulai" untuk memulai kuis ini.</p>
+        <button class="start-button" onclick="startQuiz()">Mulai Kuis</button>
     </div>
 
+
+    <div class="quiz-container">
+        <h2 class="quiz-title">Quiz Exponensial</h2>
+        <div class="quiz-question" id="question-text">Pertanyaan akan muncul di sini</div>
+        <div class="timer" id="timer">02:00</div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-controls">
+            <button class="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const quizData = [
+        {
+            question: "Tentukan nilai apabila \\(x = 2\\) dari \\(4^x + 2\\)",
+            options: ["14", "16", "18", "20"],
+            correct: "18",
+            explanation: "\\((4^x) + 2 = (4^2) + 2 = 16 + 2 = 18\\)"
+        },
+        {
+            question: "Tentukan nilai apabila \\(x = 4\\) dari \\(2^{x+1}\\)",
+            options: ["16", "32", "64", "8"],
+            correct: "32",
+            explanation: "\\(2^{x+1} = 2^{4+1} = 2^5 = 32\\)"
+        },
+        {
+            question: "Tentukan nilai apabila \\(x = 5\\) dari \\((2^{2x}) - 2\\)",
+            options: ["1022", "1024", "510", "512"],
+            correct: "1022",
+            explanation: "\\((2^{2x}) - 2 = (2^{2 \\cdot 5}) - 2 = 1024 - 2 = 1022\\)"
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    const results = [];
+    let timerInterval;
+
+    function startQuiz() {
+        // Sembunyikan halaman pengantar dan tampilkan kuis
+        document.querySelector(".intro-container").style.display = "none";
+        document.querySelector(".quiz-container").style.display = "block";
+
+        loadQuestion();
+    }
+
+    function loadQuestion() {
+        clearInterval(timerInterval);
+        startTimer(120);
+
+        const currentQuestion = quizData[currentQuestionIndex];
+        const questionText = document.getElementById("question-text");
+        const quizOptions = document.getElementById("quiz-options");
+
+        questionText.innerHTML = currentQuestion.question;
+        quizOptions.innerHTML = "";
+
+        currentQuestion.options.forEach(option => {
+            const button = document.createElement("button");
+            button.className = "quiz-option";
+            button.textContent = option;
+            button.onclick = () => selectAnswer(button, option);
+            quizOptions.appendChild(button);
+        });
+
+        MathJax.typeset(); // Render ulang MathJax di elemen yang baru dimuat
+    }
+
+    function selectAnswer(button, option) {
+        document.querySelectorAll(".quiz-option").forEach(btn => btn.classList.remove("selected"));
+        button.classList.add("selected");
+        button.dataset.selected = option;
+    }
+
+    function nextQuestion() {
+        const selectedOption = document.querySelector(".quiz-option.selected");
+
+        if (selectedOption) {
+            const currentQuestion = quizData[currentQuestionIndex];
+            const isCorrect = selectedOption.dataset.selected === currentQuestion.correct;
+
+            results.push({
+                question: currentQuestion.question,
+                selected: selectedOption.dataset.selected,
+                correct: currentQuestion.correct,
+                explanation: currentQuestion.explanation,
+                isCorrect: isCorrect
+            });
+
+            if (isCorrect) score++;
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        } else {
+            alert("Pilih jawaban terlebih dahulu!");
+        }
+    }
+
+    function startTimer(seconds) {
+        const timerElement = document.getElementById("timer");
+        let timeRemaining = seconds;
+
+        timerElement.textContent = formatTime(timeRemaining);
+
+        timerInterval = setInterval(() => {
+            timeRemaining--;
+            timerElement.textContent = formatTime(timeRemaining);
+
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                nextQuestion();
+            }
+        }, 1000);
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+    }
+
+    function showResults() {
+        clearInterval(timerInterval);
+        const questionText = document.getElementById("question-text");
+        const quizOptions = document.getElementById("quiz-options");
+        const timerElement = document.getElementById("timer");
+        const quizControls = document.querySelector(".quiz-controls");
+
+        questionText.textContent = `Kuis selesai! Skor Anda: ${score}/${quizData.length}`;
+        quizOptions.innerHTML = results
+            .map((result, index) => `
+                <div>
+                    <p><strong>Pertanyaan ${index + 1}:</strong> ${result.question}</p>
+                    <p><strong>Jawaban Anda:</strong> ${result.selected}</p>
+                    <p><strong>Jawaban Benar:</strong> ${result.correct}</p>
+                    <p><strong>Penjelasan:</strong> ${result.explanation}</p>
+                </div>
+            `)
+            .join("");
+        timerElement.style.display = "none";
+        quizControls.style.display = "none";
+
+        MathJax.typeset();
+    }
+</script>
 </body>
 </html>
